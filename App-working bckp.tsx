@@ -113,12 +113,6 @@ function App(): React.JSX.Element {
       }
   };
 
-  const checkPhoneState = () => {
-    callDetector.checkPhoneState((isOnCall) => {
-      console.log("isOnCall->", isOnCall);
-  })
-  };
-
   return (
     <SafeAreaView style={backgroundStyle}>
       <StatusBar
@@ -130,7 +124,6 @@ function App(): React.JSX.Element {
         style={backgroundStyle}>
         <Button title="Start" onPress={startCallListener} />
         <Button title="Stop" onPress={stopCallListener} />
-        <Button title="check" onPress={checkPhoneState} />
       </ScrollView>
     </SafeAreaView>
   );
